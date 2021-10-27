@@ -6,7 +6,7 @@ package parking.lot.management.system;
 //import java.awt.Font;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.*;  // awt == abstract window toolkit
 import java.awt.event.*;
 
 public class ParkingLotManagementSystem extends JFrame implements ActionListener {

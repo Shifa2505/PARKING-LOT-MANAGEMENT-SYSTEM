@@ -2,33 +2,47 @@ package parking.lot.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Dashboard extends JFrame {
+public class Dashboard extends JFrame implements ActionListener {
 
 	JMenuBar mb;
-	JMenu m1, m2, m3, m4;
-	JMenuItem i1;
+	JMenu m1, m2, m3, m4, m5;
+	JMenuItem i1, i2, i3;
 	
 	Dashboard(){
 		
 		mb = new JMenuBar();
 		add(mb);
 		
-		m1 = new JMenu("ENTRY");
+		m2 = new JMenu("ENTRY");
+		mb.add(m2);
+		
+		m3 = new JMenu("EXIT");
+		mb.add(m3);
+		
+		m4 = new JMenu("PAYMENT");
+		mb.add(m4);
+		
+		m1 = new JMenu("PARKING MANAGEMENT");
 		m1.setForeground(Color.RED);
 		mb.add(m1);
 		
-		m2 = new JMenu("EXIT");
-		mb.add(m2);
+		m5 = new JMenu("ADMIN");
+		m5.setForeground(Color.BLUE);
+		mb.add(m5);
 		
-		m3 = new JMenu("SEARCH");
-		mb.add(m3);
+		i1 = new JMenuItem("Add Employee");
+		i1.addActionListener(this);
+		m5.add(i1);
 		
-		m4 = new JMenu("CURRENT");
-		mb.add(m4);
+		i2 = new JMenuItem("Add Parking Spots");
+		i2.addActionListener(this);
+		m5.add(i2);
 		
-		i1 = new JMenuItem("ENTRY");
-		m1.add(i1);
+		i3 = new JMenuItem("More");
+		i3.addActionListener(this);
+		m1.add(i3);
 		
 		mb.setBounds(0,0,1950,30);
 		
@@ -51,6 +65,15 @@ public class Dashboard extends JFrame {
 		
 		
 		
+	}
+	public void actionPerformed(ActionEvent ae) {
+		if(ae.getActionCommand().equals("More")){
+			new More().setVisible(true);
+		}else if(ae.getActionCommand().equals("Add Employee")) {
+			new AddEmployee().setVisible(true);
+		}else if(ae.getActionCommand().equals("Add Parking Spots")) {
+			new AddParkingSpots().setVisible(true);
+		}
 	}
 	public static void main(String[] args) {
 		new Dashboard().setVisible(true);

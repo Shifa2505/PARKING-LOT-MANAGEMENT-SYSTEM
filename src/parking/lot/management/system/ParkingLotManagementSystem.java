@@ -56,8 +56,5 @@ public class ParkingLotManagementSystem extends JFrame implements ActionListener
 	
 	public static void main(String[] args) {
 		new ParkingLotManagementSystem();
-
- 
 	}
-
 }

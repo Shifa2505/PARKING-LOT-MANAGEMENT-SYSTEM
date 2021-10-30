@@ -13,5 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Shifa/Downloads/mysql-connector-java-8.0.26.zip"/>
 	<classpathentry kind="lib" path="C:/Users/Shifa/Downloads/mysql-connector-java-8.0.26/mysql-connector-java-8.0.26/mysql-connector-java-8.0.26.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Shifa/Downloads/rs2xml.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

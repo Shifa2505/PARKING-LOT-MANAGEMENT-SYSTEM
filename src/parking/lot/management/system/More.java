@@ -63,9 +63,11 @@ public class More extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent ae) {
 		if(ae.getSource()== b1) {
-		
+			new SearchSpots().setVisible(true);
+			this.setVisible(false);
 		}else if(ae.getSource() == b2) {
-			
+			new CustomerInfo().setVisible(true);
+			this.setVisible(false);
 		}else if(ae.getSource() == b3) {
 			new EmployeeInfo().setVisible(true);
 			this.setVisible(false);

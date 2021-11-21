@@ -7,8 +7,8 @@ import java.awt.event.*;
 public class Dashboard extends JFrame implements ActionListener {
 
 	JMenuBar mb;
-	JMenu m1, m2, m3, m4, m5;
-	JMenuItem i1, i2, i3;
+	JMenu m1, m2, m3, m5;
+	JMenuItem i1, i2, i3, i4, i5;
 	
 	Dashboard(){
 		
@@ -20,10 +20,7 @@ public class Dashboard extends JFrame implements ActionListener {
 		
 		m3 = new JMenu("EXIT");
 		mb.add(m3);
-		
-		m4 = new JMenu("PAYMENT");
-		mb.add(m4);
-		
+				
 		m1 = new JMenu("PARKING MANAGEMENT");
 		m1.setForeground(Color.RED);
 		mb.add(m1);
@@ -43,6 +40,14 @@ public class Dashboard extends JFrame implements ActionListener {
 		i3 = new JMenuItem("More");
 		i3.addActionListener(this);
 		m1.add(i3);
+		
+		i4 = new JMenuItem("New Vehicle");
+		i4.addActionListener(this);
+		m2.add(i4);
+		
+		i5 = new JMenuItem("Checkout");
+		i5.addActionListener(this);
+		m3.add(i5);
 		
 		mb.setBounds(0,0,1950,30);
 		
